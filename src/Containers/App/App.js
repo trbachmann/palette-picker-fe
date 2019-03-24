@@ -6,7 +6,7 @@ import Loading from '../../Components/Loading/Loading';
 import PaletteForm from '../PaletteForm/PaletteForm';
 import PropTypes from 'prop-types';
 
-class App extends Component {
+export class App extends Component {
   render() {
     return (
       <div className="App">

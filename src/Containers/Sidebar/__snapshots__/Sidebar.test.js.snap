@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar Sidebar component should match the snapshit 1`] = `
+<div>
+  <h2>
+    My Projects
+  </h2>
+  <form
+    autoComplete="off"
+  >
+    <button>
+      Create New Project
+    </button>
+    <input
+      name="name"
+      placeholder="Project Name"
+      value=""
+    />
+  </form>
+  <ProjectArea />
+</div>
+`;

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaletteForm PaletteForm component should match the snapshot 1`] = `
+<form>
+  <select>
+    <option>
+      Choose a Project
+    </option>
+  </select>
+  <input
+    placeholder="Palette Name"
+  />
+  <button>
+    Save Palette
+  </button>
+</form>
+`;

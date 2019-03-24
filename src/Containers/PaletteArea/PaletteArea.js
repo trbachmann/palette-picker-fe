@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ColorSwatch from '../../Components/ColorSwatch/ColorSwatch';
 
-export default class PaletteArea extends Component{
+export class PaletteArea extends Component{
   render() {
     return (
       <div>
@@ -11,3 +11,5 @@ export default class PaletteArea extends Component{
     )
   }
 }
+
+export default PaletteArea;

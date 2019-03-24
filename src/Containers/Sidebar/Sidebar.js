@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import ProjectArea from '../ProjectArea/ProjectArea';
-import Project from '../Project/Project';
 
-export default class extends Component{
+export class Sidebar extends Component{
   constructor (){
     super();
     this.state = {
@@ -14,7 +13,7 @@ export default class extends Component{
     return(
       <div>
         <h2>My Projects</h2>
-        <form autocomplete='off'>
+        <form autoComplete='off'>
           <button>Create New Project</button>
           <input placeholder='Project Name' name='name' value={this.state.name}/>
         </form>
@@ -23,3 +22,5 @@ export default class extends Component{
     )
   }
 }
+
+export default Sidebar;
