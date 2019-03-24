@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MiniPaletteArea from '../MiniPaletteArea/MiniPaletteArea';
 
-export default class Project extends Component{
+export class Project extends Component{
   constructor() {
     super();
     this.state = {
@@ -20,3 +20,5 @@ export default class Project extends Component{
     )
   }
 }
+
+export default Project;
