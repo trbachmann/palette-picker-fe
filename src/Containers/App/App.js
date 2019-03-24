@@ -6,9 +6,13 @@ import Loading from '../../Components/Loading/Loading';
 import PaletteForm from '../PaletteForm/PaletteForm';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { fetchProjects } from '../../Thunks/fetchProjects';
 
 export class App extends Component {
-  
+  componentDidMount() {
+    this.props.fetchProjects();
+  };
+
   render() {
     return (
       <div className="App">
@@ -25,11 +29,12 @@ export class App extends Component {
 }
 
 export const mapStateToProps = state => ({
-
+  error: state.error,
+  isLoading: state.isLoading
 })
 
 export const mapDispatchToProps = dispatch => ({
-
+  fetchProjects: () => dispatch(fetchProjects())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
