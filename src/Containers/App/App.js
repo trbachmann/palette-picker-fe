@@ -5,8 +5,10 @@ import Error from '../../Components/Error/Error';
 import Loading from '../../Components/Loading/Loading';
 import PaletteForm from '../PaletteForm/PaletteForm';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 export class App extends Component {
+  
   render() {
     return (
       <div className="App">
@@ -22,4 +24,12 @@ export class App extends Component {
   }
 }
 
-export default App;
+export const mapStateToProps = state => ({
+
+})
+
+export const mapDispatchToProps = dispatch => ({
+
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
