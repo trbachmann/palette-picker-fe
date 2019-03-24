@@ -9,7 +9,8 @@ export const fetchProjects = () => {
       dispatch(toggleLoading(false));
       dispatch(setProjects(projects));
     } catch (error) {
-      dispatch(setError(error));
+      dispatch(toggleLoading(false));
+      dispatch(setError(error.message));
     }
   }
 };
