@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class PaletteForm extends Component{
+export class PaletteForm extends Component{
   render() {
     return(
       <form>
@@ -13,3 +13,5 @@ export default class PaletteForm extends Component{
     )
   }
 }
+
+export default PaletteForm;
