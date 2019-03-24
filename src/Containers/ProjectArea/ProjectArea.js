@@ -2,7 +2,7 @@ import React from 'react';
 import Project from '../Project/Project';
 
 
-const ProjectArea = () => {
+export const ProjectArea = () => {
   return(
     <div>
       <Project/>
