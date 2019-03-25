@@ -1,4 +1,4 @@
-import { updateProject, setError, setProjects, toggleLoading } from '../Actions';
+import { addProjectPalettes, setError, toggleLoading } from '../Actions';
 import { fetchData } from '../Utils/fetch';
 
 export const fetchProjectPalettes = (id) => {
@@ -7,7 +7,7 @@ export const fetchProjectPalettes = (id) => {
       dispatch(toggleLoading(true));
       const projectPalettes = await fetchData(`/projects/${id}/palettes`);
       dispatch(toggleLoading(false));
-      dispatch(updateProject(projectPalettes))
+      dispatch(addProjectPalettes(projectPalettes, id))
     } catch (error) {
       dispatch(toggleLoading(false));
       dispatch(setError(error.message));
