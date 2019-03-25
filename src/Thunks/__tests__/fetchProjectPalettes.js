@@ -28,9 +28,9 @@ describe('fetchProjectPalettes', () => {
     expect(mockDispatch).toHaveBeenCalledWith(actions.toggleLoading(false));
   });
 
-  it('should call dispatch with updateProject with projects', async () => {
+  it('should call dispatch with addProjectPalettes with projects', async () => {
     await thunk(mockDispatch);
-    expect(mockDispatch).toHaveBeenCalledWith(actions.updateProject(mockData.mockProjects));
+    expect(mockDispatch).toHaveBeenCalledWith(actions.addProjectPalettes(mockData.mockProjects));
   });
 
   it('should call dispatch with toggleLoading with false if fetch is not okay', async () => {
