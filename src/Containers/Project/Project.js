@@ -8,10 +8,15 @@ export class Project extends Component{
       expanded: false
     }
   }
+
   render() {
     return(
       <div>
-        <h3>Project Name</h3>
+        <div>
+          <p>{this.props.name}</p>
+          <i class="fas fa-pencil-alt"></i>
+          <i class="far fa-trash-alt"></i>
+        </div>
         {
           this.state.expanded &&
           <MiniPaletteArea/>
