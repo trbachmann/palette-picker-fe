@@ -3,6 +3,11 @@ export const setProjects = (projects) => ({
   projects
 });
 
+export const updateProject = (projectPalettes) => ({
+  type: 'UPDATE_PROJECT',
+  projectPalettes
+})
+
 export const setError = (error) => ({
   type: 'SET_ERROR',
   error
