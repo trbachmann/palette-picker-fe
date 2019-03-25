@@ -18,7 +18,7 @@ export class PaletteArea extends Component{
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   currentPalette: state.currentPalette
 });
 

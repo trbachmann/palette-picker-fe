@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { PaletteArea } from './PaletteArea';
+import { PaletteArea, mapStateToProps } from './PaletteArea';
 import * as mockData from '../../mockData';
 
 describe('PaletteArea', () => {
@@ -13,6 +13,21 @@ describe('PaletteArea', () => {
 
     it('should match the snapshot', () => {
       expect(wrapper).toMatchSnapshot();
+    });
+  });
+
+  describe('mapStateToProps', () => {
+    it('should return an object with currentPalette', () => {
+      const mockState = {
+        error: '',
+        isLoading: false,
+        currentPalette: mockData.mockPalette
+      }
+      const expected = {
+        currentPalette: mockData.mockPalette
+      }
+      const mappedProps = mapStateToProps(mockState);
+      expect(mappedProps).toEqual(expected);
     });
   });
 });
