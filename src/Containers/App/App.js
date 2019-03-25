@@ -12,7 +12,30 @@ import { setPaletteColors } from '../../Actions'
 export class App extends Component {
   componentDidMount() {
     this.props.fetchProjects();
+    this.generatePalette();
   };
+
+  generatePalette() {
+    let palette = [];
+    for(let i = 0; i < 5; i++) {
+      let colorCode = this.generateColor()
+      let color = { hex: colorCode, isLocked: false }
+      palette.push(color)
+    }
+    this.props.setPaletteColors(palette)
+  }
+
+  generateColor() {
+    let color = '#'
+    for(let i=0; i<3; i++) {
+      let hexPair = Math.floor(Math.random()*256).toString(16)
+      if(hexPair.length < 2){
+        hexPair = 0 + hexPair
+      }
+      color = color + hexPair
+    }
+    return color
+  }
 
   render() {
     return (
