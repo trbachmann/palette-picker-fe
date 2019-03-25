@@ -3,8 +3,9 @@ export const setProjects = (projects) => ({
   projects
 });
 
-export const updateProject = (projectPalettes) => ({
-  type: 'UPDATE_PROJECT',
+export const addProjectPalettes = (projectPalettes, id) => ({
+  type: 'ADD_PROJECT_PALETTES',
+  id,
   projectPalettes
 })
 
