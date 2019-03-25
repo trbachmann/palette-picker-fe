@@ -7,6 +7,7 @@ import { createStore } from 'redux';
 import { rootReducer } from '../../Reducers';
 import { fetchProjects } from '../../Thunks/fetchProjects';
 import * as mockData from '../../mockData';
+import { setPaletteColors } from '../../Actions';
 
 jest.mock('../../Thunks/fetchProjects');
 
@@ -14,7 +15,8 @@ describe('App', () => {
   const mockProps = {
     error: '',
     isLoading: false,
-    fetchProjects: jest.fn()
+    fetchProjects: jest.fn(),
+    setPaletteColors: jest.fn()
   }
 
   it('renders without crashing', () => {
