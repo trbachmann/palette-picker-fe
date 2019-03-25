@@ -6,10 +6,21 @@ describe('actions', () => {
     const expected = {
       type: 'SET_PROJECTS',
       projects: mockData.mockProjects
-    }
+    };
     const result = actions.setProjects(mockData.mockProjects);
     expect(result).toEqual(expected);
   });
+
+  it('should return an object with ADD_PROJECT_PALETTES, id, palettes', () => {
+    const mockProjectPalettes = mockData.mockProjectPalettes;
+    const expected = {
+      type: 'ADD_PROJECT_PALETTES',
+      projectPalettes: mockProjectPalettes,
+      id: 1
+    };
+    const result = actions.addProjectPalettes(mockProjectPalettes, 1);
+    expect(result).toEqual(expected);
+  })
 
   it('should return an object with SET_ERROR and an error message', () => {
     const mockError = 'Error no projects exist with id 0';
