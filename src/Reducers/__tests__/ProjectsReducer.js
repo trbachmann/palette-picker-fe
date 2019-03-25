@@ -22,5 +22,18 @@ describe('projectsReducer', () => {
     const initialState = mockData.mockProjectsWithEmptyPalettes;
     const result = projectsReducer(initialState, actions.addProjectPalettes(mockPalettes, 1));
     expect(result).toEqual(mockProjects)
+  it('should add a project', () => {
+    const mockName = 'Pretty Purples';
+    const mockId = 2;
+    const initialState = [];
+    const expected = [
+      {
+        name: mockName,
+        id: mockId,
+        palettes: []
+      }
+    ]
+    const result = projectsReducer(initialState, actions.addProject(mockName, mockId));
+    expect(result).toEqual(expected);
   });
 });
