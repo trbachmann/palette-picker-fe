@@ -58,4 +58,15 @@ describe('actions', () => {
     const result = actions.setCurrentExpandedProject(1);
     expect(result).toEqual(expected);
   })
+  it('should return an object with ADD_PROJECT a name and id', () => {
+    const mockName = 'Pretty Purples';
+    const mockId = 2;
+    const expected = {
+      type: 'ADD_PROJECT',
+      name: mockName,
+      id: mockId
+    }
+    const result = actions.addProject(mockName, mockId);
+    expect(result).toEqual(expected);
+  });
 });
