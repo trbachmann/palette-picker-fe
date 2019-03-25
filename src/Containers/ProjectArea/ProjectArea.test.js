@@ -24,7 +24,8 @@ describe('ProjectArea', () => {
     it('should return an object with projects', () => {
       const mockState = {
         projects: mockData.mockProjects,
-        error: 'Oh no! Error!'
+        error: 'Oh no! Error!',
+        isLoading: false
       }
       const expected = {
         projects: mockData.mockProjects,
