@@ -10,4 +10,7 @@ export const ProjectArea = () => {
   )
 };
 
+export const mapStateToProps = state => ({
+  projects: state.projects
+})
 export default ProjectArea;
