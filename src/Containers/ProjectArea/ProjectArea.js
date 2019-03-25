@@ -1,6 +1,7 @@
 import React from 'react';
 import Project from '../Project/Project';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 
 export const ProjectArea = (props) => {
@@ -19,3 +20,7 @@ export const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps)(ProjectArea);
+
+ProjectArea.propTypes = {
+  projects: PropTypes.array
+}
