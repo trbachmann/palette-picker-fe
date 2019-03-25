@@ -7,6 +7,7 @@ import PaletteForm from '../PaletteForm/PaletteForm';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchProjects } from '../../Thunks/fetchProjects';
+import { setPaletteColors } from '../../Actions'
 
 export class App extends Component {
   componentDidMount() {
@@ -34,7 +35,8 @@ export const mapStateToProps = state => ({
 })
 
 export const mapDispatchToProps = dispatch => ({
-  fetchProjects: () => dispatch(fetchProjects())
+  fetchProjects: () => dispatch(fetchProjects()),
+  setPaletteColors: (palette) => dispatch(setPaletteColors(palette))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
