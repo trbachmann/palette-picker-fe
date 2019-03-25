@@ -2,7 +2,30 @@
 
 exports[`PaletteArea PaletteArea component should match the snapshot 1`] = `
 <div>
-  PaletteArea!!!
-  <ColorSwatch />
+  <ColorSwatch
+    hex="#FCB97D"
+    isLocked={false}
+    key="#FCB97D"
+  />
+  <ColorSwatch
+    hex="#EDD892"
+    isLocked={false}
+    key="#EDD892"
+  />
+  <ColorSwatch
+    hex="#C6B89E"
+    isLocked={false}
+    key="#C6B89E"
+  />
+  <ColorSwatch
+    hex="#B5B8A3"
+    isLocked={false}
+    key="#B5B8A3"
+  />
+  <ColorSwatch
+    hex="#AABA9E"
+    isLocked={false}
+    key="#AABA9E"
+  />
 </div>
 `;
