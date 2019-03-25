@@ -1,11 +1,15 @@
 import React from 'react';
 import Project from '../Project/Project';
+import { connect } from 'react-redux';
 
 
-export const ProjectArea = () => {
+export const ProjectArea = (props) => {
+  const projects = props.projects.map(currentProject => {
+    return (<Project {...currentProject} key={currentProject.id}/>)
+  })
   return(
     <div>
-      <Project/>
+      {projects}
     </div>
   )
 };
@@ -13,4 +17,5 @@ export const ProjectArea = () => {
 export const mapStateToProps = state => ({
   projects: state.projects
 })
-export default ProjectArea;
+
+export default connect(mapStateToProps)(ProjectArea);
