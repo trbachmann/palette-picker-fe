@@ -9,7 +9,7 @@ describe('fetchProjectPalettes', () => {
   const mockError = 'No projects found';
 
   beforeEach(() => {
-    utils.fetchData = jest.fn().mockImplementation(() => Promise.resolve(mockData.mockProjects));
+    utils.fetchData = jest.fn().mockImplementation(() => Promise.resolve(mockData.mockProjectPalettes));
   });
 
   it('should call dispatch with toggleLoading with true', () => {
@@ -30,7 +30,7 @@ describe('fetchProjectPalettes', () => {
 
   it('should call dispatch with addProjectPalettes with projects', async () => {
     await thunk(mockDispatch);
-    expect(mockDispatch).toHaveBeenCalledWith(actions.addProjectPalettes(mockData.mockProjects));
+    expect(mockDispatch).toHaveBeenCalledWith(actions.addProjectPalettes(mockData.mockProjectPalettes, 1));
   });
 
   it('should call dispatch with toggleLoading with false if fetch is not okay', async () => {
