@@ -10,7 +10,7 @@ exports[`App App component should match the snapshot 1`] = `
   <button>
     Generate A Palette
   </button>
-  <PaletteArea />
+  <Connect(PaletteArea) />
   <PaletteForm />
   <Sidebar />
   <Error />
