@@ -13,6 +13,16 @@ export const projectsReducer = (state = [], action) => {
         return project
       })
       return updatedProjects
+    case 'ADD_PROJECT':
+      const projectsWithNewProject = [
+        ...state, 
+        {
+          name: action.name,
+          id: action.id,
+          palettes: []
+        }
+      ];
+      return projectsWithNewProject
     default:
       return state
   };
