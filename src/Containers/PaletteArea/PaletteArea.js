@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ColorSwatch from '../../Components/ColorSwatch/ColorSwatch';
+import { connect } from 'react-redux';
 
 export class PaletteArea extends Component{
   render() {
@@ -12,4 +13,9 @@ export class PaletteArea extends Component{
   }
 }
 
-export default PaletteArea;
+const mapStateToProps = (state) => ({
+  currentPalette: state.currentPalette
+});
+
+export default connect(mapStateToProps)(PaletteArea);
+
