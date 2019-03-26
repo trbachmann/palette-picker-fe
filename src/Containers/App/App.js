@@ -15,7 +15,7 @@ export class App extends Component {
     this.generatePalette();
   };
 
-  generatePalette() {
+  generatePalette = () => {
     let palette = [];
     for(let i = 0; i < 5; i++) {
       let colorCode = this.generateColor()
@@ -25,7 +25,7 @@ export class App extends Component {
     this.props.setPaletteColors(palette)
   }
 
-  generateColor() {
+  generateColor = () => {
     let color = '#'
     for(let i=0; i<3; i++) {
       let hexPair = Math.floor(Math.random()*256).toString(16)
@@ -43,7 +43,7 @@ export class App extends Component {
       <div className='App'>
         <div className='App--header'>
           <h1>Colorations</h1>
-          <button>Generate A Palette</button>
+          <button onClick={this.generatePalette}>Generate A Palette</button>
         </div>
         <PaletteArea/>
         <PaletteForm/>
