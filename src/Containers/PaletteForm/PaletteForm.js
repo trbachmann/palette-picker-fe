@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export class PaletteForm extends Component{
   render() {
     return(
-      <form>
+      <form className='PaletteForm--form'>
         <select>
           <option>Choose a Project</option>
         </select>
