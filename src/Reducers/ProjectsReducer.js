@@ -51,6 +51,20 @@ export const projectsReducer = (state = [], action) => {
         return project.id !== action.projectId;
       });
       return projectsFiltered;
+    case 'REPLACE_PALETTE':
+      const projectsWithUpdatedPalette = state.map(project => {
+        if(project.id === action.palette.project_id) {
+          const updatedPalettes = project.palettes.map(palette => {
+            if(palette.id === action.palette.id) {
+              return action.palette;
+            }
+            return palette;
+          });
+          return {...project, palettes: updatedPalettes};
+        }
+        return project;
+      });
+      return projectsWithUpdatedPalette;
     default:
       return state
   };
