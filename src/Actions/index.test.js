@@ -86,4 +86,14 @@ describe('actions', () => {
     const result = actions.addPaletteToProject(mockProjectId, paletteToSave);
     expect(result).toEqual(expected);
   });
+
+  it('should return an objet with DELETE_PALETTE and a palette id', () => {
+    const mockPaletteId = 4;
+    const expected = {
+      type: 'DELETE_PALETTE',
+      paletteId: mockPaletteId
+    };
+    const result = actions.deletePalette(mockPaletteId);
+    expect(result).toEqual(expected);
+  })
 });
