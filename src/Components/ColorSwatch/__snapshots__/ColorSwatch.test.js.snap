@@ -5,7 +5,7 @@ exports[`ColorSwatch should match the snapshot when a color is locked 1`] = `
   className="ColorSwatch--div"
 >
   <div
-    classNAme="ColorSwatch--div--color"
+    className="ColorSwatch--div--color"
     style={
       Object {
         "backgroundColor": "#FCB97D",
@@ -26,7 +26,7 @@ exports[`ColorSwatch should match the snapshot when a color is unlocked 1`] = `
   className="ColorSwatch--div"
 >
   <div
-    classNAme="ColorSwatch--div--color"
+    className="ColorSwatch--div--color"
     style={
       Object {
         "backgroundColor": "#FCB97D",
