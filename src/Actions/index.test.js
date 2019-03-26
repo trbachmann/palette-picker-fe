@@ -69,4 +69,21 @@ describe('actions', () => {
     const result = actions.addProject(mockName, mockId);
     expect(result).toEqual(expected);
   });
+
+  it('should return an object with ADD_PALETTE a project id and palette', () => {
+    const mockProjectId = 1
+    const paletteToSave = { 
+      name: 'Lavender Shades', 
+      ...mockData.mockPalette, 
+      id: 2, 
+      project_id: mockProjectId
+    };
+    const expected = {
+      type: 'ADD_PALETTE',
+      projectId: mockProjectId,
+      palette: paletteToSave
+    };
+    const result = actions.addPaletteToProject(mockProjectId, paletteToSave);
+    expect(result).toEqual(expected);
+  });
 });
