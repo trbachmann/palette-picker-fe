@@ -34,7 +34,7 @@ describe('postPalette', () => {
     expect(mockDispatch).toHaveBeenCalledWith(actions.toggleLoading(false));
   });
 
-  it.skip('should call dispatch with addPaletteToProject  with a palettes', async () => {
+  it('should call dispatch with addPaletteToProject  with a palettes', async () => {
     const expected = {
       ...mockPalette,
       id: mockPaletteId
