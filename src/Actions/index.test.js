@@ -120,11 +120,13 @@ describe('actions', () => {
   
   it('should return an object with UPDATE_PROJECT_NAME and a name', () => {
     const mockName = 'Updated Pretty Purples';
+    const mockId = 2;
     const expected = {
       type: 'UPDATE_PROJECT_NAME',
-      name: mockName
+      name: mockName,
+      id: mockId
     };
-    const result = actions.updateProjectName(mockName);
+    const result = actions.updateProjectName(mockName, mockId);
     expect(result).toEqual(expected);
   });
 });

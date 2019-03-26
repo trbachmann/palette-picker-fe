@@ -61,7 +61,8 @@ export const replacePalette = (palette) => ({
   palette
 });
 
-export const updateProjectName = (name) => ({
+export const updateProjectName = (name, id) => ({
   type: 'UPDATE_PROJECT_NAME',
-  name
+  name,
+  id
 });
