@@ -1,3 +1,16 @@
-h1 {
-  color: tomato;
+.App {
+  display: grid;
+  grid-template-areas:  
+    "sidebar header"
+    "sidebar palette"
+    "sidebar form";
+  grid-template-columns: 1fr 2fr;
+}
+
+.App--header {
+  grid-area: header;
+
+  h1 {
+    color: tomato;
+  }
 }
