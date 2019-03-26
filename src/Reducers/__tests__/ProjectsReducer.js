@@ -36,4 +36,23 @@ describe('projectsReducer', () => {
     const result = projectsReducer(initialState, actions.addProject(mockName, mockId));
     expect(result).toEqual(expected);
   });
+
+  it('should add a palette to a project', () => {
+    const mockId = 1;
+    const mockProject = {
+      name: 'Purples',
+      id: mockId,
+      palettes: []
+    }
+    const mockPalette = {
+      name: 'Lavender Shades',
+      ...mockData.mockPalette,
+      id: 2,
+      project_id: mockId
+    }
+    const initialState = [mockProject];
+    const expected = [ {...mockProject, palettes: [ mockPalette ] } ];
+    const result = projectsReducer(initialState, actions.addPaletteToProject(mockId, mockPalette));
+    expect(result).toEqual(expected);
+  });
 });
