@@ -13,7 +13,7 @@ exports[`Project Project component should match the snapshot 1`] = `
       className="far fa-trash-alt"
     />
   </div>
-  <MiniPalette />
+  <MiniPaletteArea />
 </div>
 `;
 
@@ -30,6 +30,6 @@ exports[`Project Project component should match the snapshot when expanded is tr
       className="far fa-trash-alt"
     />
   </div>
-  <MiniPalette />
+  <MiniPaletteArea />
 </div>
 `;
