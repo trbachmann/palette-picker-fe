@@ -38,15 +38,18 @@ export class App extends Component {
   }
 
   render() {
+    const { error, isLoading } = this.props;
     return (
-      <div className="App">
-        <h1>Colorations</h1>
-        <button>Generate A Palette</button>
+      <div className='App'>
+        <div className='App--header'>
+          <h1>Colorations</h1>
+          <button>Generate A Palette</button>
+        </div>
         <PaletteArea/>
         <PaletteForm/>
         <Sidebar/>
-        <Error/>
-        <Loading/>
+        { error && <Error/>}
+        { isLoading && <Loading/>}
       </div>
     );
   }
