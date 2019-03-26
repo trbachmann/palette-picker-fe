@@ -5,6 +5,8 @@ export const fetchData = async (path, options) => {
       throw new Error(error)
     } else if (response.status !== 204) {
       return await response.json()
+    } else {
+      return response.status;
     }
 };
 
