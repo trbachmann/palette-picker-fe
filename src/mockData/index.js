@@ -125,4 +125,56 @@ export const mockProjectPalettes = [
       created_at: "2019-03-19T20:28:06.193Z",
       updated_at: "2019-03-19T20:28:06.193Z"
   }
-]
+];
+
+export const mockProjectsAfterDelete = [
+  {
+    "id": 1,
+    "name": "Game Time",
+    "created_at": "2019-03-23T18:13:25.614Z",
+    "updated_at": "2019-03-23T18:13:25.614Z",
+    palettes: [
+      {
+        id: 2,
+        name: "Favorites",
+        color1: "#A0DDFF",
+        color2: "#758ECD",
+        color3: "#C1CEFE",
+        color4: "#7189FF",
+        color5: "#624CAB",
+        project_id: 1,
+        created_at: "2019-03-19T20:28:06.193Z",
+        updated_at: "2019-03-19T20:28:06.193Z"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Movie Tracker",
+    "created_at": "2019-03-23T18:13:25.631Z",
+    "updated_at": "2019-03-23T18:13:25.631Z",
+    palettes: []
+  },
+  {
+    "id": 3,
+    "name": "Trapper Keeper",
+    "created_at": "2019-03-23T18:13:25.652Z",
+    "updated_at": "2019-03-23T18:13:25.652Z",
+    palettes: []
+  }
+];
+
+export const mockProjectsAfterProjectDelete = [
+  {
+    "id": 1,
+    "name": "Game Time",
+    "created_at": "2019-03-23T18:13:25.614Z",
+    "updated_at": "2019-03-23T18:13:25.614Z"
+  },
+  {
+    "id": 3,
+    "name": "Trapper Keeper",
+    "created_at": "2019-03-23T18:13:25.652Z",
+    "updated_at": "2019-03-23T18:13:25.652Z"
+  }
+];

@@ -39,3 +39,14 @@ export const addPaletteToProject = (projectId, palette) => ({
   projectId,
   palette
 });
+
+export const deletePalette = (paletteId, projectId) => ({
+  type: 'DELETE_PALETTE',
+  paletteId,
+  projectId
+});
+
+export const deleteProject = (projectId) => ({
+  type: 'DELETE_PROJECT',
+  projectId
+});

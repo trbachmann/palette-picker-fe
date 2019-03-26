@@ -4,16 +4,18 @@ exports[`App App component should match the snapshot 1`] = `
 <div
   className="App"
 >
-  <h1>
-    Colorations
-  </h1>
-  <button>
-    Generate A Palette
-  </button>
+  <div
+    className="App--header"
+  >
+    <h1>
+      Colorations
+    </h1>
+    <button>
+      Generate A Palette
+    </button>
+  </div>
   <Connect(PaletteArea) />
   <PaletteForm />
   <Sidebar />
-  <Error />
-  <Loading />
 </div>
 `;

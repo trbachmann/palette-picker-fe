@@ -86,4 +86,26 @@ describe('actions', () => {
     const result = actions.addPaletteToProject(mockProjectId, paletteToSave);
     expect(result).toEqual(expected);
   });
+
+  it('should return an objet with DELETE_PALETTE and a palette id', () => {
+    const mockPaletteId = 4;
+    const mockProjectId = 3;
+    const expected = {
+      type: 'DELETE_PALETTE',
+      paletteId: mockPaletteId,
+      projectId: mockProjectId
+    };
+    const result = actions.deletePalette(mockPaletteId, mockProjectId);
+    expect(result).toEqual(expected);
+  });
+
+  it('should return an oject with DELETE_PROJECT and a projectId', () => {
+    const mockId = 5;
+    const expected = {
+      type: 'DELETE_PROJECT',
+      projectId: mockId
+    };
+    const result = actions.deleteProject(mockId);
+    expect(result).toEqual(expected);
+  });
 });

@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Sidebar Sidebar component should match the snapshit 1`] = `
-<div>
+<div
+  className="Sidebar--div"
+>
   <h2>
     My Projects
   </h2>

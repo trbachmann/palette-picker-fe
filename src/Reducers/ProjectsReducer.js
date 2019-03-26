@@ -35,6 +35,22 @@ export const projectsReducer = (state = [], action) => {
         return project;
       });
       return projectsWithNewPalette
+    case 'DELETE_PALETTE':
+      const projectsWithPaletteRemoved = state.map(project => {
+        if(project.id === action.projectId) {
+          const updatedPalettes = project.palettes.filter(palette => {
+            return palette.id !== action.paletteId;
+          });
+          return { ...project, palettes: updatedPalettes };
+        }
+        return project;
+      });
+      return projectsWithPaletteRemoved
+    case 'DELETE_PROJECT':
+      const projectsFiltered = state.filter(project => {
+        return project.id !== action.projectId;
+      });
+      return projectsFiltered;
     default:
       return state
   };
