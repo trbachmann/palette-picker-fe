@@ -23,3 +23,8 @@ export const setPaletteColors = (colors) => ({
   type: 'SET_PALETTE_COLORS',
   palette: colors
 });
+
+export const setCurrentExpandedProject = (id) => ({
+  type: 'SET_CURRENT_EXPANDED_PROJECT',
+  id
+})
