@@ -21,7 +21,9 @@ describe('projectsReducer', () => {
     const mockPalettes = mockData.mockProjectPalettes;
     const initialState = mockData.mockProjectsWithEmptyPalettes;
     const result = projectsReducer(initialState, actions.addProjectPalettes(mockPalettes, 1));
-    expect(result).toEqual(mockProjects)
+    expect(result).toEqual(mockProjects);
+  });
+  
   it('should add a project', () => {
     const mockName = 'Pretty Purples';
     const mockId = 2;
