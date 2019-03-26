@@ -11,7 +11,7 @@ export class PaletteArea extends Component{
     });
 
     return (
-      <div>
+      <div className='PaletteArea--div'>
         {colors}
       </div>
     )

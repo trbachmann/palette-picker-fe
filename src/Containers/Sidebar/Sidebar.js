@@ -11,7 +11,7 @@ export class Sidebar extends Component{
 
   render() {
     return(
-      <div>
+      <div className='Sidebar--div'>
         <h2>My Projects</h2>
         <form autoComplete='off'>
           <button>Create New Project</button>
