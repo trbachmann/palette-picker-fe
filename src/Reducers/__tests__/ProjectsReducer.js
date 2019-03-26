@@ -61,8 +61,9 @@ describe('projectsReducer', () => {
   it('should delete a specific palette', () => {
     const initialState = mockData.mockProjectsWithFullPalettes;
     const mockPaletteIdToDelete = 1;
+    const mockProjectId = 1;
     const expected = mockData.mockProjectsAfterDelete;
-    const result = projectsReducer(initialState, actions.deletePalette(mockPaletteIdToDelete));
+    const result = projectsReducer(initialState, actions.deletePalette(mockPaletteIdToDelete, mockProjectId));
     expect(result).toEqual(expected);
   });
 });
