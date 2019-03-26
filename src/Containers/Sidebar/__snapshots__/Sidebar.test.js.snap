@@ -17,6 +17,6 @@ exports[`Sidebar Sidebar component should match the snapshit 1`] = `
       value=""
     />
   </form>
-  <ProjectArea />
+  <Connect(ProjectArea) />
 </div>
 `;

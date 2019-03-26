@@ -2,6 +2,26 @@
 
 exports[`ProjectArea ProjectArea component should match the snapshot 1`] = `
 <div>
-  <Project />
+  <Connect(Project)
+    created_at="2019-03-23T18:13:25.614Z"
+    id={1}
+    key="1"
+    name="Game Time"
+    updated_at="2019-03-23T18:13:25.614Z"
+  />
+  <Connect(Project)
+    created_at="2019-03-23T18:13:25.631Z"
+    id={2}
+    key="2"
+    name="Movie Tracker"
+    updated_at="2019-03-23T18:13:25.631Z"
+  />
+  <Connect(Project)
+    created_at="2019-03-23T18:13:25.652Z"
+    id={3}
+    key="3"
+    name="Trapper Keeper"
+    updated_at="2019-03-23T18:13:25.652Z"
+  />
 </div>
 `;

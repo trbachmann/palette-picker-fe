@@ -3,6 +3,12 @@ export const setProjects = (projects) => ({
   projects
 });
 
+export const addProjectPalettes = (projectPalettes, id) => ({
+  type: 'ADD_PROJECT_PALETTES',
+  id,
+  projectPalettes
+})
+
 export const setError = (error) => ({
   type: 'SET_ERROR',
   error
@@ -17,3 +23,8 @@ export const setPaletteColors = (colors) => ({
   type: 'SET_PALETTE_COLORS',
   palette: colors
 });
+
+export const setCurrentExpandedProject = (id) => ({
+  type: 'SET_CURRENT_EXPANDED_PROJECT',
+  id
+})

@@ -1,13 +1,26 @@
 import React from 'react';
 import Project from '../Project/Project';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 
-export const ProjectArea = () => {
+export const ProjectArea = (props) => {
+  const projects = props.projects.map(currentProject => {
+    return (<Project {...currentProject} key={currentProject.id}/>)
+  })
   return(
     <div>
-      <Project/>
+      {projects}
     </div>
   )
 };
 
-export default ProjectArea;
+export const mapStateToProps = state => ({
+  projects: state.projects
+})
+
+export default connect(mapStateToProps)(ProjectArea);
+
+ProjectArea.propTypes = {
+  projects: PropTypes.array
+}
