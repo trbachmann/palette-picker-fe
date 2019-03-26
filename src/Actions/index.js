@@ -28,3 +28,14 @@ export const setCurrentExpandedProject = (id) => ({
   type: 'SET_CURRENT_EXPANDED_PROJECT',
   id
 })
+export const addProject = (name, id) => ({
+  type: 'ADD_PROJECT',
+  name,
+  id
+});
+
+export const addPaletteToProject = (projectId, palette) => ({
+  type: 'ADD_PALETTE',
+  projectId,
+  palette
+});
