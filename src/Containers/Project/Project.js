@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MiniPaletteArea from '../MiniPaletteArea/MiniPaletteArea';
 import { fetchProjectPalettes } from '../../Thunks/fetchProjectPalettes';
+import { setCurrentExpandedProject } from '../../Actions';
 import { connect } from 'react-redux';
 
 export class Project extends Component{
@@ -12,14 +13,19 @@ export class Project extends Component{
   }
   
   fetchPalettes = async () => {
-    this.setState({expanded: !this.state.expanded})
+    const { id, currentExpandedProject } = this.props
+    if(id === currentExpandedProject) {
+      this.props.setCurrentExpandedProject('')
+    } else {
+      this.props.setCurrentExpandedProject(id)
+    }
     if(!this.props.palettes.length){
-      await this.props.fetchProjectPalettes(this.props.id)
+      await this.props.fetchProjectPalettes(id)
     }
   }
 
   render() {
-    const {name, palettes} = this.props
+    const { name, palettes, id, currentExpandedProject } = this.props
     return(
       <div>
         <div onClick={this.fetchPalettes}>
@@ -28,7 +34,7 @@ export class Project extends Component{
           <i className="far fa-trash-alt"></i>
         </div>
         {
-          this.state.expanded &&
+          id ===  currentExpandedProject &&
           <MiniPaletteArea projectPalettes={palettes}/>
         }
       </div>
@@ -36,8 +42,13 @@ export class Project extends Component{
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  fetchProjectPalettes: (id) => dispatch(fetchProjectPalettes(id))
+export const mapDispatchToProps = dispatch => ({
+  fetchProjectPalettes: (id) => dispatch(fetchProjectPalettes(id)),
+  setCurrentExpandedProject: (id) => dispatch(setCurrentExpandedProject(id))
 })
 
-export default connect(null, mapDispatchToProps)(Project);
+export const mapStateToProps = state => ({
+  currentExpandedProject: state.currentExpandedProject
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Project);
