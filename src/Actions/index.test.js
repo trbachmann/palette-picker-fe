@@ -99,7 +99,7 @@ describe('actions', () => {
     expect(result).toEqual(expected);
   });
 
-  it('should return an oject with DELETE_PROJECT and a projectId', () => {
+  it('should return an object with DELETE_PROJECT and a projectId', () => {
     const mockId = 5;
     const expected = {
       type: 'DELETE_PROJECT',
@@ -115,6 +115,16 @@ describe('actions', () => {
       palette: mockData.mockPaletteWithUpdates
     };
     const result = actions.replacePalette(mockData.mockPaletteWithUpdates);
+    expect(result).toEqual(expected)
+  });
+  
+  it('should return an object with EXPAND_MINI_PALETTE and colors', () => {
+    const mockColors = [ '#aefaef', '#34ef87', '#abcdef', '#123456', '#007698']
+    const expected = {
+      type: 'EXPAND_MINI_PALETTE',
+      colors: mockColors
+    };
+    const result = actions.expandMiniPalette(mockColors);
     expect(result).toEqual(expected);
   });
   
