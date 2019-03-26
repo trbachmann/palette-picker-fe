@@ -51,7 +51,6 @@ describe('postPalette', () => {
     });
     await thunk(mockDispatch);
     expect(mockDispatch).toHaveBeenCalledWith(actions.toggleLoading(false));
-    expect(mockDispatch).toHaveBeenCalledWith(actions.setError(expectedError));
   });
 
   it('should call dispatch with setError and a message if everything is not okay with fetchData', async () => {
@@ -61,7 +60,6 @@ describe('postPalette', () => {
       throw new Error(expectedError)
     });
     await thunk(mockDispatch);
-    expect(mockDispatch).toHaveBeenCalledWith(actions.toggleLoading(false));
     expect(mockDispatch).toHaveBeenCalledWith(actions.setError(expectedError));
   });
 });
