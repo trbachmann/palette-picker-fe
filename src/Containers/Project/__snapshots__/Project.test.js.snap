@@ -13,6 +13,7 @@ exports[`Project Project component should match the snapshot 1`] = `
       className="far fa-trash-alt"
     />
   </div>
+  <MiniPalette />
 </div>
 `;
 
