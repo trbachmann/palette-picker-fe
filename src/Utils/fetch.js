@@ -3,7 +3,7 @@ export const fetchData = async (path, options) => {
     if(response.status >= 300) {
       const error = await response.json()
       throw new Error(error)
-    } else {
+    } else if (response.status !== 204) {
       return await response.json()
     }
 };
