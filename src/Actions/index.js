@@ -50,3 +50,7 @@ export const deleteProject = (projectId) => ({
   type: 'DELETE_PROJECT',
   projectId
 });
+export const expandMiniPalette = (colors) => ({
+  type: 'EXPAND_MINI_PALETTE',
+  colors
+})
