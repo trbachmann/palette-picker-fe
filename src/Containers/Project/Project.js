@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MiniPaletteArea from '../MiniPaletteArea/MiniPaletteArea';
+import MiniPaletteArea from '../../Components/MiniPaletteArea/MiniPaletteArea';
 import { fetchProjectPalettes } from '../../Thunks/fetchProjectPalettes';
 import { setCurrentExpandedProject } from '../../Actions';
 import { connect } from 'react-redux';
