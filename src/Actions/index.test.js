@@ -49,4 +49,13 @@ describe('actions', () => {
     const result = actions.setPaletteColors(mockData.mockPalette);
     expect(result).toEqual(expected);
   });
+
+  it('should return an object with SET_CURRENT_EXPANDED_PROJECT and an id', () => {
+    const expected = {
+      type: 'SET_CURRENT_EXPANDED_PROJECT',
+      id: 1
+    };
+    const result = actions.setCurrentExpandedProject(1);
+    expect(result).toEqual(expected);
+  })
 });
