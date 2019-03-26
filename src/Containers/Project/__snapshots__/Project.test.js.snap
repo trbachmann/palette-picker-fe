@@ -11,6 +11,7 @@ exports[`Project Project component should match the snapshot 1`] = `
     />
     <i
       className="far fa-trash-alt"
+      onClick={[Function]}
     />
   </div>
   <MiniPaletteArea />
@@ -28,6 +29,7 @@ exports[`Project Project component should match the snapshot when expanded is tr
     />
     <i
       className="far fa-trash-alt"
+      onClick={[Function]}
     />
   </div>
   <MiniPaletteArea />
