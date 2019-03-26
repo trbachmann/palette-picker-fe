@@ -33,3 +33,9 @@ export const addProject = (name, id) => ({
   name,
   id
 });
+
+export const addPaletteToProject = (projectId, palette) => ({
+  type: 'ADD_PALETTE',
+  projectId,
+  palette
+});
