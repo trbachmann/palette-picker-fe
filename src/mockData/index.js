@@ -178,3 +178,61 @@ export const mockProjectsAfterProjectDelete = [
     "updated_at": "2019-03-23T18:13:25.652Z"
   }
 ];
+
+export const mockPaletteBeforeUpdate = {
+  name: 'Great Greens',
+  color1: "#FCB97D",
+  color2: "#EDD892",
+  color3: "#C6B89E",
+  color4: "#B5B8A3",
+  color5: "#AABA9E",
+  project_id: 1
+};
+
+export const mockPaletteWithUpdates = {
+  name: 'Great Green Shades',
+  color1: "#GGGGGG",
+  color2: "#EDD892",
+  color3: "#C6B89E",
+  color4: "#G2G2G3",
+  color5: "#AABA9E",
+  project_id: 1
+};
+
+export const mockProjectsBeforePaletteUpdate = [
+  {
+    id: 1,
+    name: "Game Maker",
+    created_at: "2019-03-23T18:13:25.614Z",
+    updated_at: "2019-03-23T18:13:25.614Z",
+    palettes: [
+      mockPaletteBeforeUpdate
+    ]
+  },
+  {
+    id: 2,
+    name: "Keeper Time",
+    created_at: "2019-03-23T18:13:27.614Z",
+    updated_at: "2019-03-23T18:13:27.614Z",
+    palettes: []
+  }
+];
+
+export const mockProjectsAfterPaletteUpdate = [
+  {
+    id: 1,
+    name: "Game Maker",
+    created_at: "2019-03-23T18:13:25.614Z",
+    updated_at: "2019-03-23T18:13:25.614Z",
+    palettes: [
+      mockPaletteWithUpdates
+    ]
+  },
+  {
+    id: 2,
+    name: "Keeper Time",
+    created_at: "2019-03-23T18:13:27.614Z",
+    updated_at: "2019-03-23T18:13:27.614Z",
+    palettes: []
+  }
+];

@@ -108,4 +108,13 @@ describe('actions', () => {
     const result = actions.deleteProject(mockId);
     expect(result).toEqual(expected);
   });
+
+  it('should return an object with REPLACE_PALETTE and a palette', () => {
+    const expected = {
+      type: 'REPLACE_PALETTE',
+      palette: mockData.mockPaletteWithUpdates
+    };
+    const result = actions.replacePalette(mockData.mockPaletteWithUpdates);
+    expect(result).toEqual(expected);
+  });
 });

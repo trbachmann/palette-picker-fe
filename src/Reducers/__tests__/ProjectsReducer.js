@@ -74,4 +74,12 @@ describe('projectsReducer', () => {
     const result = projectsReducer(initialState, actions.deleteProject(mockProjectIdToDelete));
     expect(result).toEqual(expected);
   });
+
+  it('should replace a palette with an updated palette', () => {
+    const initialState = mockData.mockProjectsBeforePaletteUpdate;
+    const mockPalette = mockData.mockPaletteWithUpdates;
+    const expected = mockData.mockProjectsAfterPaletteUpdate;
+    const result = projectsReducer(initialState, actions.replacePalette(mockPalette));
+    expect(result).toEqual(expected);
+  });
 });

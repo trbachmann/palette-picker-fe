@@ -37,7 +37,8 @@ describe('postPalette', () => {
   it('should call dispatch with addPaletteToProject  with a palettes', async () => {
     const expected = {
       ...mockPalette,
-      id: mockPaletteId
+      id: mockPaletteId,
+      project_id: mockProjectId
     }
     await thunk(mockDispatch);
     expect(mockDispatch).toHaveBeenCalledWith(actions.addPaletteToProject (mockProjectId, expected));

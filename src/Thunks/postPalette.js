@@ -9,7 +9,7 @@ export const postPalette = (projectId, palette) => {
       dispatch(toggleLoading(true));
       const paletteId = await fetchData(url, options);
       dispatch(toggleLoading(false));
-      dispatch(addPaletteToProject(projectId, {...palette, id: paletteId.id }));
+      dispatch(addPaletteToProject(projectId, {...palette, id: paletteId.id, project_id: projectId }));
     } catch (error) {
       dispatch(toggleLoading(false));
       dispatch(setError(error.message))
