@@ -117,4 +117,14 @@ describe('actions', () => {
     const result = actions.replacePalette(mockData.mockPaletteWithUpdates);
     expect(result).toEqual(expected);
   });
+  
+  it('should return an object with UPDATE_PROJECT_NAME and a name', () => {
+    const mockName = 'Updated Pretty Purples';
+    const expected = {
+      type: 'UPDATE_PROJECT_NAME',
+      name: mockName
+    };
+    const result = actions.updateProjectName(mockName);
+    expect(result).toEqual(expected);
+  });
 });
