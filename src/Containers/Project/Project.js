@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
-import MiniPaletteArea from '../MiniPaletteArea/MiniPaletteArea';
+import MiniPaletteArea from '../../Components/MiniPaletteArea/MiniPaletteArea';
 import { fetchProjectPalettes } from '../../Thunks/fetchProjectPalettes';
 import { setCurrentExpandedProject } from '../../Actions';
 import { connect } from 'react-redux';
 
 export class Project extends Component{
-  constructor() {
-    super();
-    this.state = {
-      expanded: false
+  fetchPalettes = async () => {
+    const { id } = this.props
+    if(!this.props.palettes.length){
+      await this.props.fetchProjectPalettes(id)
+      this.checkIfCurrentExpandedProject()
+    } else {
+      this.checkIfCurrentExpandedProject()
     }
   }
-  
-  fetchPalettes = async () => {
-    const { id, currentExpandedProject } = this.props
+
+  checkIfCurrentExpandedProject = () => {
+    const {id, currentExpandedProject } = this.props
     if(id === currentExpandedProject) {
       this.props.setCurrentExpandedProject('')
     } else {
       this.props.setCurrentExpandedProject(id)
-    }
-    if(!this.props.palettes.length){
-      await this.props.fetchProjectPalettes(id)
     }
   }
 
