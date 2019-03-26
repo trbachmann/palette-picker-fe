@@ -45,3 +45,8 @@ export const deletePalette = (paletteId, projectId) => ({
   paletteId,
   projectId
 });
+
+export const deleteProject = (projectId) => ({
+  type: 'DELETE_PROJECT',
+  projectId
+});
