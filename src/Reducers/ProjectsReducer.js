@@ -23,6 +23,18 @@ export const projectsReducer = (state = [], action) => {
         }
       ];
       return projectsWithNewProject
+    case 'ADD_PALETTE':
+      const projectsWithNewPalette = state.map(project => {
+        if(project.id === action.projectId) {
+          const projectWithNewPalette = {
+            ...project,
+            palettes: [...project.palettes, action.palette]
+          }
+          return projectWithNewPalette;
+        }
+        return project;
+      });
+      return projectsWithNewPalette
     default:
       return state
   };
