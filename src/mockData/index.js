@@ -163,3 +163,18 @@ export const mockProjectsAfterDelete = [
     palettes: []
   }
 ];
+
+export const mockProjectsAfterProjectDelete = [
+  {
+    "id": 1,
+    "name": "Game Time",
+    "created_at": "2019-03-23T18:13:25.614Z",
+    "updated_at": "2019-03-23T18:13:25.614Z"
+  },
+  {
+    "id": 3,
+    "name": "Trapper Keeper",
+    "created_at": "2019-03-23T18:13:25.652Z",
+    "updated_at": "2019-03-23T18:13:25.652Z"
+  }
+];
