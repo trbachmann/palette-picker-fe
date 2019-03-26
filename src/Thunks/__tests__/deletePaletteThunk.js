@@ -8,13 +8,14 @@ describe('deletePaletteThunk', () => {
   const mockProjectId = 1;
   const thunk = deletePaletteThunk(mockPaletteId, mockProjectId);
   const mockIdError = 'No palette exists with id: 0';
+  utils.fetchData = jest.fn();
 
   beforeEach(() => {
     utils.fetchData = jest.fn().mockImplementation(() => Promise.resolve({ status: 204 }));
   });
 
-  it('should call dispatch with toggleLoading with true', () => {
-    thunk(mockDispatch);
+  it('should call dispatch with toggleLoading with true', async () => {
+    await thunk(mockDispatch);
     expect(mockDispatch).toHaveBeenCalledWith(actions.toggleLoading(true));
   });
 
