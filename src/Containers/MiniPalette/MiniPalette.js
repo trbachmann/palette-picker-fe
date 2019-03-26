@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { expandMiniPalette } from '../../Actions';
+import { deletePaletteThunk } from '../../Thunks/deletePaletteThunk'
 
 export class MiniPalette extends Component{
+  deletePalette = () => {
+    const { id, project_id, deletePaletteThunk} = this.props
+    deletePaletteThunk(id, project_id);
+  }
+
   expandPalette = () => {
     const { color1, color2, color3, color4, color5 } = this.props
     const colors = [color1, color2, color3, color4, color5]
@@ -15,8 +21,7 @@ export class MiniPalette extends Component{
       <div>
         <div className='MiniPalette-div-controls'>
           <p>{name}</p>
-          <i className="fas fa-pencil-alt"></i>
-          <i className="far fa-trash-alt"></i>
+          <i className="far fa-trash-alt" onClick={this.deletePalette}></i>
         </div>
         <div className='MiniPalette--div' onClick={this.expandPalette}>
           <div className='MiniPalette--div--color' style={{backgroundColor: color1}}></div>
@@ -31,7 +36,8 @@ export class MiniPalette extends Component{
 };
 
 export const mapDispatchToProps = dispatch => ({
-  expandMiniPalette: (colors) => dispatch(expandMiniPalette(colors))
+  expandMiniPalette: (colors) => dispatch(expandMiniPalette(colors)),
+  deletePaletteThunk: (paletteId, projectId) => dispatch(deletePaletteThunk(paletteId, projectId))
 });
 
 export default connect(null, mapDispatchToProps)(MiniPalette);
