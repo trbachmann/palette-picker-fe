@@ -9,12 +9,14 @@ exports[`Sidebar Sidebar component should match the snapshit 1`] = `
   </h2>
   <form
     autoComplete="off"
+    onSubmit={[Function]}
   >
     <button>
       Create New Project
     </button>
     <input
       name="name"
+      onChange={[Function]}
       placeholder="Project Name"
       value=""
     />
