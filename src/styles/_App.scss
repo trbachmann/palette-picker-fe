@@ -19,8 +19,12 @@ body {
   padding: 20px;
 
   h1 {
-    // color: rgb(58, 15, 7);
     font-family: $header-font;
     font-size: 75px;
+    color: #353131;
+  }
+
+  button {
+    border-radius: 5px;
   }
 }
