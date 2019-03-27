@@ -60,3 +60,12 @@ export const replacePalette = (palette) => ({
   type: 'REPLACE_PALETTE',
   palette
 });
+
+export const updatePaletteInEdit = (palette) => ({
+  type: 'UPDATE_PALETTE_IN_EDIT',
+  palette
+});
+
+export const clearPaletteInEdit = () => ({
+  type: 'CLEAR_PALETTE_IN_EDIT'
+});
