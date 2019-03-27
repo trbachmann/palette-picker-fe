@@ -16,11 +16,16 @@ export class App extends Component {
   };
 
   generatePalette = () => {
-    let palette = [];
+    let palette = [...this.props.currentPalette];
     for(let i = 0; i < 5; i++) {
-      let colorCode = this.generateColor()
-      let color = { hex: colorCode, isLocked: false }
-      palette.push(color)
+      if (palette[i] && !palette[i].isLocked) {
+        let colorCode = this.generateColor();
+        palette[i] = { hex: colorCode, isLocked: false };
+      } else if (!palette[i]) {
+        let colorCode = this.generateColor();
+        let color = { hex: colorCode, isLocked: false };
+        palette.push(color);
+      }
     }
     this.props.setPaletteColors(palette)
   }
@@ -57,7 +62,8 @@ export class App extends Component {
 
 export const mapStateToProps = state => ({
   error: state.error,
-  isLoading: state.isLoading
+  isLoading: state.isLoading,
+  currentPalette: state.currentPalette
 })
 
 export const mapDispatchToProps = dispatch => ({

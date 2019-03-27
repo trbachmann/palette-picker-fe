@@ -66,3 +66,8 @@ export const updateProjectName = (name, id) => ({
   name,
   id
 });
+
+export const updateIsLocked = (index) => ({
+  type: 'UPDATE_IS_LOCKED',
+  index
+});

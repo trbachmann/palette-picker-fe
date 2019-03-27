@@ -7,6 +7,11 @@ export const currentPaletteReducer = (state = [], action) => {
         return { hex: color, isLocked: false }
       })
       return palette
+    case 'UPDATE_IS_LOCKED':
+      let updatedColors = [...state];
+      const colorToUpdate = updatedColors[action.index];
+      [ updatedColors[action.index] ] = [ {...colorToUpdate, isLocked: !colorToUpdate.isLocked} ];
+      return updatedColors;
     default:
       return state
   };
