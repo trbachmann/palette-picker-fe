@@ -60,3 +60,9 @@ export const replacePalette = (palette) => ({
   type: 'REPLACE_PALETTE',
   palette
 });
+
+export const updateProjectName = (name, id) => ({
+  type: 'UPDATE_PROJECT_NAME',
+  name,
+  id
+});

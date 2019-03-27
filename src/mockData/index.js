@@ -236,3 +236,27 @@ export const mockProjectsAfterPaletteUpdate = [
     palettes: []
   }
 ];
+
+export const mockProjectsAfterNameUpdate = [
+  {
+    "id": 1,
+    "name": "Game Time",
+    "created_at": "2019-03-23T18:13:25.614Z",
+    "updated_at": "2019-03-23T18:13:25.614Z",
+    palettes: []
+  },
+  {
+    "id": 2,
+    "name": "Movie Matcher",
+    "created_at": "2019-03-23T18:13:25.631Z",
+    "updated_at": "2019-03-23T18:13:25.631Z",
+    palettes: []
+  },
+  {
+    "id": 3,
+    "name": "Trapper Keeper",
+    "created_at": "2019-03-23T18:13:25.652Z",
+    "updated_at": "2019-03-23T18:13:25.652Z",
+    palettes: []
+  }
+];

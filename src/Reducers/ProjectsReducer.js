@@ -65,6 +65,14 @@ export const projectsReducer = (state = [], action) => {
         return project;
       });
       return projectsWithUpdatedPalette;
+    case 'UPDATE_PROJECT_NAME':
+    const projectsWithUpdatedProjName = state.map(project => {
+      if(project.id === action.id) {
+          return {...project, name: action.name };
+        }
+        return project;
+      });
+      return projectsWithUpdatedProjName;
     default:
       return state
   };
