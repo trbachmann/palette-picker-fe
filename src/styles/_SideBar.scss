@@ -1,3 +1,23 @@
 .Sidebar--div {
   grid-area: sidebar;
+  box-shadow: 2px 0px 2px #00000047;
+  height: 100vh;
+
+  h2 {
+    font-family: $header-font;
+    font-size: 30px;
+    margin: 5px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input,
+    button {
+      margin: 5px;
+      border-radius: 5px;
+    }
+  }
 }
