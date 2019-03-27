@@ -1,0 +1,21 @@
+.ProjectArea--div {
+
+}
+
+.Project--div--name {
+  display: flex;
+  margin: 5px;
+
+  h3 {
+    font-family: $text-font;
+    font-size: 20px;
+    color: #353131;
+  }
+
+  .fa-trash-alt {
+    font-size: 15px;
+    color: #353131;
+    margin: 2px;
+  }
+  
+}
