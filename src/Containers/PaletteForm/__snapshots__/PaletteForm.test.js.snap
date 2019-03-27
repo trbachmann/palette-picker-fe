@@ -3,14 +3,42 @@
 exports[`PaletteForm PaletteForm component should match the snapshot 1`] = `
 <form
   className="PaletteForm--form"
+  onSubmit={[Function]}
 >
-  <select>
-    <option>
+  <select
+    onChange={[Function]}
+    value=""
+  >
+    <option
+      defaultValue={true}
+      value=""
+    >
       Choose a Project
+    </option>
+    <option
+      key="1"
+      value={1}
+    >
+      Game Time
+    </option>
+    <option
+      key="2"
+      value={2}
+    >
+      Movie Tracker
+    </option>
+    <option
+      key="3"
+      value={3}
+    >
+      Trapper Keeper
     </option>
   </select>
   <input
+    name="name"
+    onChange={[Function]}
     placeholder="Palette Name"
+    value=""
   />
   <button>
     Save Palette

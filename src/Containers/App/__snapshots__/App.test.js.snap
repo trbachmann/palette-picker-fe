@@ -10,12 +10,14 @@ exports[`App App component should match the snapshot 1`] = `
     <h1>
       Colorations
     </h1>
-    <button>
+    <button
+      onClick={[Function]}
+    >
       Generate A Palette
     </button>
   </div>
   <Connect(PaletteArea) />
-  <PaletteForm />
+  <Connect(PaletteForm) />
   <Connect(Sidebar) />
 </div>
 `;
