@@ -1,4 +1,12 @@
-.MiniPalette--div {
+.MiniPaletteArea--div {
+  margin: 5px auto 5px 11px;
+  border: 1px solid $font-color;
+  padding: 5px;
+  width: 95px;
+  border-radius: 5px;
+}
+
+.MiniPalette--div--colors {
   display: flex;
 
   .MiniPalette--div--color {
@@ -9,15 +17,23 @@
   }
 }
 
-.MiniPalette-div-controls {
+.MiniPalette--div--controls {
   display: flex;
+  justify-content: space-between;
+  margin: 5px 0px 0px 0px;
+  width: 93px;
 
   p {
-    margin: 3px;
-    font-size: 15px;
+    width: 80px;
+    overflow: scroll;
+    font-size: 11px;
+    font-family: $text-font;
+    color: $font-color;
   }
 
   .far {
-    margin: 3px;
+    margin-left: 10px;
+    font-size: 9px;
+    color: $font-color
   }
 }
