@@ -1,6 +1,6 @@
 .Sidebar--div {
   grid-area: sidebar;
-  box-shadow: 2px 0px 2px #00000047;
+  box-shadow: 2px 0px 2px $border-color;
   height: 100vh;
   min-height: 540px;
 
@@ -21,7 +21,7 @@
       margin: 5px;
       border-radius: 5px;
       width: 120px;
-      border: 1px solid $font-color;
+      border: 1px solid $border-color;
     }
   }
 }
