@@ -8,7 +8,7 @@
     font-family: $header-font;
     font-size: 30px;
     margin: 5px;
-    color: #353131;
+    color: $font-color;
   }
 
   form {
@@ -21,7 +21,7 @@
       margin: 5px;
       border-radius: 5px;
       width: 120px;
-      border: 1px solid black;
+      border: 1px solid $font-color;
     }
   }
 }
