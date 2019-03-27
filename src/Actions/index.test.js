@@ -117,4 +117,21 @@ describe('actions', () => {
     const result = actions.replacePalette(mockData.mockPaletteWithUpdates);
     expect(result).toEqual(expected);
   });
+
+  it('should return an object with UPDATE_PALETTE_IN_EDIT and a palette', () => {
+    const expected = {
+      type: 'UPDATE_PALETTE_IN_EDIT',
+      palette: mockData.mockPaletteBeforeUpdate
+    }
+    const result = actions.updatePaletteInEdit(mockData.mockPaletteBeforeUpdate);
+    expect(result).toEqual(expected);
+  });
+
+  it('should return an obejct with CLEAR_PALETTE_IN_EDIT', () => {
+    const expected = {
+      type: 'CLEAR_PALETTE_IN_EDIT'
+    }
+    const result = actions.clearPaletteInEdit();
+    expect(result).toEqual(expected)
+  });
 });
