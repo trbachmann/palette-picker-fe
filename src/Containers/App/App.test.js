@@ -16,7 +16,8 @@ describe('App', () => {
     error: '',
     isLoading: false,
     fetchProjects: jest.fn(),
-    setPaletteColors: jest.fn()
+    setPaletteColors: jest.fn(),
+    currentPalette: mockData.mockPalette
   }
 
   it('renders without crashing', () => {
