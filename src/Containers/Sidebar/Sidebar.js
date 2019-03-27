@@ -7,7 +7,8 @@ export class Sidebar extends Component{
   constructor() {
     super();
     this.state = {
-      name: ''
+      name: '',
+      error: ''
     };
   };
   
@@ -19,14 +20,24 @@ export class Sidebar extends Component{
   handleSubmit = (event) => {
     event.preventDefault();
     const { name } = this.state;
-    this.props.postProject(name);
-    this.setState({name: ''});
+    const { projects } = this.props;
+    const foundName = projects.find(project => {
+      return name.toLowerCase() === project.name.toLowerCase()
+    })
+    if (foundName) {
+      this.setState({error: 'That project name is already taken! Please enter a different one.'})
+    } else {
+      this.props.postProject(name);
+      this.setState({name: ''});
+    }
   };
 
   render() {
+    const { error } = this.state;
     return(
       <div className='Sidebar--div'>
         <h2>My Projects</h2>
+        { error && <p>{error}</p>}
         <form 
           autoComplete='off' 
           onSubmit={this.handleSubmit}>
@@ -47,4 +58,8 @@ export const mapDispatchToProps = dispatch => ({
   postProject: (name) => dispatch(postProject(name))
 });
 
-export default connect(null, mapDispatchToProps)(Sidebar);
+export const mapStateToProps = state => ({
+  projects: state.projects
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);
