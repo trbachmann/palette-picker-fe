@@ -1,16 +1,26 @@
+body {
+  box-sizing: border-box; 
+}
+
 .App {
   display: grid;
   grid-template-areas:  
     "sidebar header"
     "sidebar palette"
     "sidebar form";
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 145px 1fr;
 }
 
 .App--header {
   grid-area: header;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 
   h1 {
-    color: tomato;
+    // color: rgb(58, 15, 7);
+    font-family: $header-font;
+    font-size: 75px;
   }
 }
