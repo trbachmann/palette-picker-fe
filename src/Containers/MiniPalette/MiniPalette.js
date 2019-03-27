@@ -18,12 +18,12 @@ export class MiniPalette extends Component{
   render() {
     const {name, color1, color2, color3, color4, color5 } = this.props
     return(
-      <div>
-        <div className='MiniPalette-div-controls'>
+      <div className='MiniPalette--div'>
+        <div className='MiniPalette--div--controls'>
           <p>{name}</p>
           <i className="far fa-trash-alt" onClick={this.deletePalette}></i>
         </div>
-        <div className='MiniPalette--div' onClick={this.expandPalette}>
+        <div className='MiniPalette--div--colors' onClick={this.expandPalette}>
           <div className='MiniPalette--div--color' style={{backgroundColor: color1}}></div>
           <div className='MiniPalette--div--color' style={{backgroundColor: color2}}></div>
           <div className='MiniPalette--div--color' style={{backgroundColor: color3}}></div>
