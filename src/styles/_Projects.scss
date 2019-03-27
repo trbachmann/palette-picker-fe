@@ -1,21 +1,25 @@
 .ProjectArea--div {
-
+  margin-top: 10px;
+  height: 70%;
+  overflow: scroll;
 }
 
 .Project--div--name {
   display: flex;
-  margin: 5px;
+  margin: 10px 5px;
 
   h3 {
     font-family: $text-font;
-    font-size: 20px;
+    font-size: 15px;
     color: #353131;
+    width: 100px;
+    overflow: scroll;
   }
 
   .fa-trash-alt {
-    font-size: 15px;
+    font-size: 11px;
     color: #353131;
-    margin: 2px;
+    margin: 0px 5px;
   }
   
 }
