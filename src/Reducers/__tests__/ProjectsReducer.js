@@ -82,4 +82,13 @@ describe('projectsReducer', () => {
     const result = projectsReducer(initialState, actions.replacePalette(mockPalette));
     expect(result).toEqual(expected);
   });
+
+  it('should replace a project name with an update name', () => {
+    const mockNameUpdate = 'Movie Matcher';
+    const mockId = 2;
+    const initialState = mockData.mockProjectsWithEmptyPalettes;
+    const expected = mockData.mockProjectsAfterNameUpdate;
+    const result = projectsReducer(initialState, actions.updateProjectName(mockNameUpdate, mockId));
+    expect(result).toEqual(expected);
+  });
 });
