@@ -260,3 +260,27 @@ export const mockProjectsAfterNameUpdate = [
     palettes: []
   }
 ];
+
+export const mockMinPaletteToExpand = [
+  "#FGFHES",
+  "#E6D292",
+  "#B6B89E",
+  "#A5B8A3",
+  "#DABA9E",
+];
+
+export const mockColorsAfterExpand = [
+  { hex: "#FGFHES", isLocked: false },
+  { hex: "#E6D292", isLocked: false },
+  { hex: "#B6B89E", isLocked: false },
+  { hex: "#A5B8A3", isLocked: false },
+  { hex: "#DABA9E", isLocked: false }
+];
+
+export const mockPaletteAfterLock = [
+  { hex: "#FCB97D", isLocked: false },
+  { hex: "#EDD892", isLocked: false },
+  { hex: "#C6B89E", isLocked: false },
+  { hex: "#B5B8A3", isLocked: true },
+  { hex: "#AABA9E", isLocked: false }
+]
