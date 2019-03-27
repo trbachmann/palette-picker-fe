@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { expandMiniPalette } from '../../Actions';
+import { expandMiniPalette, updatePaletteInEdit } from '../../Actions';
 
 export class MiniPalette extends Component{
   expandPalette = () => {
-    const { color1, color2, color3, color4, color5 } = this.props
+    const { color1, color2, color3, color4, color5, name, project_id, id } = this.props
     const colors = [color1, color2, color3, color4, color5]
-    this.props.expandMiniPalette(colors)
+    this.props.expandMiniPalette(colors);
+    this.props.updatePaletteInEdit({
+      name,
+      id,
+      color1,
+      color2,
+      color3,
+      color4,
+      color5,
+      project_id,
+    });
   }
 
   render() {
@@ -31,7 +41,8 @@ export class MiniPalette extends Component{
 };
 
 export const mapDispatchToProps = dispatch => ({
-  expandMiniPalette: (colors) => dispatch(expandMiniPalette(colors))
+  expandMiniPalette: (colors) => dispatch(expandMiniPalette(colors)),
+  updatePaletteInEdit: (palette) => dispatch(updatePaletteInEdit(palette))
 });
 
 export default connect(null, mapDispatchToProps)(MiniPalette);
