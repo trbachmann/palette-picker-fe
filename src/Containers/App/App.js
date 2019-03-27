@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchProjects } from '../../Thunks/fetchProjects';
 import { setPaletteColors } from '../../Actions'
+import PaletteEditForm from '../PaletteEditForm/PaletteEditForm';
 
 export class App extends Component {
   componentDidMount() {
@@ -38,7 +39,7 @@ export class App extends Component {
   }
 
   render() {
-    const { error, isLoading } = this.props;
+    const { error, isLoading, paletteInEdit } = this.props;
     return (
       <div className='App'>
         <div className='App--header'>
@@ -46,7 +47,8 @@ export class App extends Component {
           <button>Generate A Palette</button>
         </div>
         <PaletteArea/>
-        <PaletteForm/>
+        { paletteInEdit === '' && <PaletteForm/> }
+        { paletteInEdit !== '' && <PaletteEditForm /> }
         <Sidebar/>
         { error && <Error/>}
         { isLoading && <Loading/>}
@@ -57,7 +59,8 @@ export class App extends Component {
 
 export const mapStateToProps = state => ({
   error: state.error,
-  isLoading: state.isLoading
+  isLoading: state.isLoading,
+  paletteInEdit: state.paletteInEdit
 })
 
 export const mapDispatchToProps = dispatch => ({
