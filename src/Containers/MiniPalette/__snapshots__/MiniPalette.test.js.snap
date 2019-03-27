@@ -1,7 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MiniPalette should match the snapshot 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+exports[`MiniPalette MiniPalette component should match the snapshot 1`] = `
+<div>
+  <div
+    className="MiniPalette--div--controls"
+  >
+    <p>
+      Not favorites
+    </p>
+    <i
+      className="far fa-trash-alt"
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    className="MiniPalette--div--colors"
+    onClick={[Function]}
+  >
+    <div
+      className="MiniPalette--div--color"
+      style={
+        Object {
+          "backgroundColor": "#FCB97D",
+        }
+      }
+    />
+    <div
+      className="MiniPalette--div--color"
+      style={
+        Object {
+          "backgroundColor": "#EDD892",
+        }
+      }
+    />
+    <div
+      className="MiniPalette--div--color"
+      style={
+        Object {
+          "backgroundColor": "#C6B89E",
+        }
+      }
+    />
+    <div
+      className="MiniPalette--div--color"
+      style={
+        Object {
+          "backgroundColor": "#B5B8A3",
+        }
+      }
+    />
+    <div
+      className="MiniPalette--div--color"
+      style={
+        Object {
+          "backgroundColor": "#AABA9E",
+        }
+      }
+    />
+  </div>
+</div>
 `;
