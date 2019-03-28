@@ -61,7 +61,7 @@ export class PaletteForm extends Component{
           {this.makeOptions()}
         </select>
         <input 
-          placeholder='Palette Name'
+          placeholder='Enter New Palette Name'
           name='name'
           value={this.state.name}
           onChange={this.handleChange}/>

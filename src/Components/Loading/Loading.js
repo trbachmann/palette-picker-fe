@@ -3,7 +3,7 @@ import React from 'react';
 const Loading = () => {
   return(
     <div>
-      Loading!
+      <h2>Loading a set of custom colors for you!</h2>
     </div>
   )
 };

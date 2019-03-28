@@ -28,7 +28,7 @@ export class Sidebar extends Component{
       this.setState({error: 'That project name is already taken! Please enter a different one.'})
     } else {
       this.props.postProject(name);
-      this.setState({name: ''});
+      this.setState({name: '', error: ''});
     }
   };
 
@@ -42,7 +42,7 @@ export class Sidebar extends Component{
           autoComplete='off' 
           onSubmit={this.handleSubmit}>
           <input 
-            placeholder='Project Name' 
+            placeholder='Enter New Project Name' 
             name='name' 
             value={this.state.name} 
             onChange={this.handleChange}/>

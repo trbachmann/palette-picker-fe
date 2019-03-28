@@ -49,12 +49,12 @@ export class App extends Component {
         <div className='App--header'>
           <h1>Colorations</h1>
           <button onClick={this.generatePalette}>Generate A Palette</button>
+          { error && <Error/>}
+          { isLoading && <Loading/>}
         </div>
         <PaletteArea/>
         <PaletteForm/>
         <Sidebar/>
-        { error && <Error/>}
-        { isLoading && <Loading/>}
       </div>
     );
   }

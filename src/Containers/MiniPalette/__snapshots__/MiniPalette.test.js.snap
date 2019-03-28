@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MiniPalette MiniPalette component should match the snapshot 1`] = `
-<div>
+<div
+  className="MiniPalette--div"
+>
   <div
     className="MiniPalette--div--controls"
   >
