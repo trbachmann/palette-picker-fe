@@ -41,12 +41,12 @@ export class Sidebar extends Component{
         <form 
           autoComplete='off' 
           onSubmit={this.handleSubmit}>
-          <button>Create New Project</button>
           <input 
             placeholder='Project Name' 
             name='name' 
             value={this.state.name} 
             onChange={this.handleChange}/>
+          <button>Create New Project</button>
         </form>
         <ProjectArea/>
       </div>

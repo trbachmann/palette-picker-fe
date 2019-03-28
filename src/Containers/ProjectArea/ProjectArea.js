@@ -9,7 +9,7 @@ export const ProjectArea = (props) => {
     return (<Project {...currentProject} key={currentProject.id}/>)
   })
   return(
-    <div>
+    <div className='ProjectArea--div'>
       {projects}
     </div>
   )

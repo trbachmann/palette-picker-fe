@@ -12,13 +12,17 @@ exports[`ColorSwatch should match the snapshot when a color is locked 1`] = `
       }
     }
   />
-  <i
-    className="fas fa-lock"
-    onClick={[Function]}
-  />
-  <p>
-    #FCB97D
-  </p>
+  <div
+    className="ColorSwatch--div--name"
+  >
+    <i
+      className="fas fa-lock"
+      onClick={[Function]}
+    />
+    <p>
+      #FCB97D
+    </p>
+  </div>
 </div>
 `;
 
@@ -34,12 +38,16 @@ exports[`ColorSwatch should match the snapshot when a color is unlocked 1`] = `
       }
     }
   />
-  <i
-    className="fas fa-unlock"
-    onClick={[Function]}
-  />
-  <p>
-    #FCB97D
-  </p>
+  <div
+    className="ColorSwatch--div--name"
+  >
+    <i
+      className="fas fa-unlock"
+      onClick={[Function]}
+    />
+    <p>
+      #FCB97D
+    </p>
+  </div>
 </div>
 `;

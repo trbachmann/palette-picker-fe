@@ -34,9 +34,8 @@ export class Project extends Component{
     const { name, palettes, id, currentExpandedProject } = this.props
     return(
       <div>
-        <div onClick={this.fetchPalettes}>
-          <p>{name}</p>
-          <i className="fas fa-pencil-alt"></i>
+        <div className='Project--div--name'>
+          <h3 onClick={this.fetchPalettes}>{name}</h3>
           <i className="far fa-trash-alt" onClick={this.deleteProject}></i>
         </div>
         {

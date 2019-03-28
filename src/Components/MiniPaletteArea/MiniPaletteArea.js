@@ -8,7 +8,7 @@ const MiniPaletteArea = (props) => {
     )
   })
   return(
-    <div>
+    <div className='MiniPaletteArea--div'> 
       {palettesToShow}
     </div>
   )

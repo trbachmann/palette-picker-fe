@@ -1,8 +1,21 @@
 .ColorSwatch--div {
-
-
+  height: 275px;
+  width: 18%;
+  border: 1px solid $border-color;
+  margin: 5px;
+  border-radius: 0px 20px 0px 20px;
+  
   .ColorSwatch--div--color {
-    height: 200px;
-    width: 75px;
+    height: 90%;
+    width: 100%;
+    border-radius: 0px 19px 0px 20px;
+  }
+
+  .ColorSwatch--div--name {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+    font-family: $text-font;
+    color: $font-color;
   }
 }

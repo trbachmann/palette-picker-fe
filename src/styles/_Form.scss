@@ -1,3 +1,14 @@
 .PaletteForm--form {
   grid-area: form;
+  display: flex;
+  justify-content: center;
+
+  select,
+  input,
+  button {
+    margin: 20px 10px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid $border-color;
+  }
 }

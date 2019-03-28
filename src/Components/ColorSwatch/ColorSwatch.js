@@ -6,8 +6,10 @@ const ColorSwatch = ({ hex, isLocked, index, updateIsLocked }) => {
     <div className='ColorSwatch--div'>
       <div className='ColorSwatch--div--color' style={{backgroundColor: hex}}>
       </div>
-      <i className={lockIcon} onClick={() => updateIsLocked(index)}></i >
-      <p>{hex.toUpperCase()}</p>
+      <div className='ColorSwatch--div--name'>
+        <i className={lockIcon} onClick={() => updateIsLocked(index)}></i >
+        <p>{hex.toUpperCase()}</p>
+      </div>
     </div>
   )
 };

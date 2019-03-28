@@ -3,11 +3,10 @@
 exports[`Project Project component should match the snapshot 1`] = `
 <div>
   <div
-    onClick={[Function]}
+    className="Project--div--name"
   >
-    <p />
-    <i
-      className="fas fa-pencil-alt"
+    <h3
+      onClick={[Function]}
     />
     <i
       className="far fa-trash-alt"
@@ -21,11 +20,10 @@ exports[`Project Project component should match the snapshot 1`] = `
 exports[`Project Project component should match the snapshot when expanded is true 1`] = `
 <div>
   <div
-    onClick={[Function]}
+    className="Project--div--name"
   >
-    <p />
-    <i
-      className="fas fa-pencil-alt"
+    <h3
+      onClick={[Function]}
     />
     <i
       className="far fa-trash-alt"

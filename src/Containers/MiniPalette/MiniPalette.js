@@ -18,7 +18,7 @@ export class MiniPalette extends Component{
   render() {
     const {name, color1, color2, color3, color4, color5 } = this.props
     return(
-      <div>
+      <div className='MiniPalette--div'>
         <div className='MiniPalette--div--controls'>
           <p>{name}</p>
           <i className="far fa-trash-alt" onClick={this.deletePalette}></i>
