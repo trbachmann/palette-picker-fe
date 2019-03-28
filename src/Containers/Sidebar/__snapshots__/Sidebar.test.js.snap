@@ -11,15 +11,15 @@ exports[`Sidebar Sidebar component should match the snapshit 1`] = `
     autoComplete="off"
     onSubmit={[Function]}
   >
-    <button>
-      Create New Project
-    </button>
     <input
       name="name"
       onChange={[Function]}
       placeholder="Project Name"
       value=""
     />
+    <button>
+      Create New Project
+    </button>
   </form>
   <Connect(ProjectArea) />
 </div>
