@@ -1,11 +1,12 @@
 # Colorations
-Looking for color inspiration for your next website or project? Palette Picker is a full stack application that quickly generates color palettes, which users can tailor and save for future reference.  
+Looking for color inspiration for your next website or project? Colorations is a full stack application that quickly generates color palettes, which users can tailor and save for future reference.  
 
 ### See it live:
 https://colorations.herokuapp.com/
 
 Associated backend repo: https://github.com/dylhof/palette-picker-be  
 ### Preview:  
+![Video Preview of Colorations](./src/colorations.gif)
 
 ### Primary Technologies Used:
 * React 
