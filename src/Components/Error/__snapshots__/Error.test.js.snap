@@ -2,6 +2,8 @@
 
 exports[`Error should match the snapshot 1`] = `
 <div>
-  Error!
+  <h2>
+    Sorry! Something went wrong :( Please try again later!
+  </h2>
 </div>
 `;

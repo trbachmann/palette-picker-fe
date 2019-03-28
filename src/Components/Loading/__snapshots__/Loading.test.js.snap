@@ -2,6 +2,8 @@
 
 exports[`Loading should match the snapshot 1`] = `
 <div>
-  Loading!
+  <h2>
+    Loading a set of custom colors for you!
+  </h2>
 </div>
 `;

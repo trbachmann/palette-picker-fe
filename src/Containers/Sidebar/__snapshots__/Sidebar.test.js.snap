@@ -39,15 +39,15 @@ exports[`Sidebar Sidebar component should set an error and match snapshot with e
     autoComplete="off"
     onSubmit={[Function]}
   >
-    <button>
-      Create New Project
-    </button>
     <input
       name="name"
       onChange={[Function]}
       placeholder="Project Name"
       value="Game Time"
     />
+    <button>
+      Create New Project
+    </button>
   </form>
   <Connect(ProjectArea) />
 </div>
