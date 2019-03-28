@@ -4,7 +4,7 @@ import MiniPalette from '../../Containers/MiniPalette/MiniPalette';
 const MiniPaletteArea = (props) => {
   const palettesToShow = props.projectPalettes.map(palette => {
     return (
-      <MiniPalette {...palette}/>
+      <MiniPalette {...palette} key={palette.id}/>
     )
   })
   return(

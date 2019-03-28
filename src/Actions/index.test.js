@@ -139,4 +139,14 @@ describe('actions', () => {
     const result = actions.updateProjectName(mockName, mockId);
     expect(result).toEqual(expected);
   });
+
+  it('should return an object with UPDATE_IS_LOCKED and an index', () => {
+    const mockIndex = 4;
+    const expected = {
+      type: 'UPDATE_IS_LOCKED',
+      index: mockIndex
+    }
+    const result = actions.updateIsLocked(mockIndex);
+    expect(result).toEqual(expected);
+  });
 });
