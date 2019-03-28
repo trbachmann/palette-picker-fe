@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Sidebar Sidebar component should match the snapshit 1`] = `
+exports[`Sidebar Sidebar component should match the snapshot 1`] = `
 <div
   className="Sidebar--div"
 >
@@ -19,6 +19,34 @@ exports[`Sidebar Sidebar component should match the snapshit 1`] = `
       onChange={[Function]}
       placeholder="Project Name"
       value=""
+    />
+  </form>
+  <Connect(ProjectArea) />
+</div>
+`;
+
+exports[`Sidebar Sidebar component should set an error and match snapshot with error if the project name already exists 1`] = `
+<div
+  className="Sidebar--div"
+>
+  <h2>
+    My Projects
+  </h2>
+  <p>
+    That project name is already taken! Please enter a different one.
+  </p>
+  <form
+    autoComplete="off"
+    onSubmit={[Function]}
+  >
+    <button>
+      Create New Project
+    </button>
+    <input
+      name="name"
+      onChange={[Function]}
+      placeholder="Project Name"
+      value="Game Time"
     />
   </form>
   <Connect(ProjectArea) />
